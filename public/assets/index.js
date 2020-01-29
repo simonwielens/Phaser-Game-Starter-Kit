@@ -4,8 +4,8 @@ import Level1 from './scenes/Level1.js';
 
 var config = {
 	type: Phaser.AUTO,
-	width: 640,
-	height: 360,
+	width: 800,
+	height: 600,
 	scale: {
 		scale: 'SHOW_ALL',
 		orientation: 'LANDSCAPE'
@@ -13,14 +13,12 @@ var config = {
 	resolution: window.devicePixelRatio,
 	pixelArt: true,
 	physics: {
-		default: 'arcade',
-		arcade: {
-			debug: true,
-			gravity: {
-				y: 500
-			}
-		}
-	},
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
+        }
+    },
 	scene: [Intro, Level1]
 };
 

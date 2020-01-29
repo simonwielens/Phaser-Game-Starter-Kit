@@ -29,7 +29,7 @@ export default class Intro extends Phaser.Scene {
 			text: 'Press Space Bar',
 			style: {
 				fontSize: '20px',
-				fontFamily: 'Arial',
+				fontFamily: 'Monofett',
 				color: '#ffffff',
 				align: 'center',
 				backgroundColor: '#000000',
@@ -46,12 +46,12 @@ export default class Intro extends Phaser.Scene {
 		var input = this.input;
 		WebFont.load({
 			google: {
-				families: ['Fredericka the Great']
+				families: ['Fredericka the Great', 'Monofett']
 			},
 			active: function() {
 				add
-					.text(75, 100, `Phaser 3 Starter Kit`, {
-						fontFamily: 'Fredericka the Great',
+					.text(75, 100, `Fintan Vs Dry January`, {
+						fontFamily: 'Monofett',
 						fontSize: 50,
 						color: '#ffffff'
 					})
