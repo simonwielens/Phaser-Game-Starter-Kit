@@ -1,6 +1,7 @@
 // import { Game } from './phaser.min.js';
 import Intro from './scenes/Intro.js';
 import Level1 from './scenes/Level1.js';
+import Multiplayer from './scenes/Multiplayer.js';
 
 var config = {
 	type: Phaser.AUTO,
@@ -19,7 +20,7 @@ var config = {
             debug: false
         }
     },
-	scene: [Intro, Level1]
+	scene: [Intro, Level1, Multiplayer]
 };
 
 var game = new Phaser.Game(config);

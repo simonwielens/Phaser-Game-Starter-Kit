@@ -10,6 +10,8 @@ export default class Intro extends Phaser.Scene {
 			'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
 		);
 
+		this.load.image('sky', 'assets/sky.png');
+
 		var progress = this.add.graphics();
 		const self = this;
 		this.load.on('progress', function(value) {
@@ -23,16 +25,17 @@ export default class Intro extends Phaser.Scene {
 		});
 	}
 	create() {
+
+		this.add.image(400, 300, 'sky');
 		this.make.text({
-			x: 250,
+			x: 100,
 			y: 300,
-			text: 'Press Space Bar',
+			text: 'Press Space Bar to Play Ida Vs Ida (WASD + Arrows)',
 			style: {
-				fontSize: '20px',
+				fontSize: '30px',
 				fontFamily: 'Monofett',
 				color: '#ffffff',
 				align: 'center',
-				backgroundColor: '#000000',
 				shadow: {
 					color: '#000000',
 					fill: true,
@@ -50,8 +53,8 @@ export default class Intro extends Phaser.Scene {
 			},
 			active: function() {
 				add
-					.text(75, 100, `Fintan Vs Dry January`, {
-						fontFamily: 'Monofett',
+					.text(75, 100, `The Pursuit of happiness`, {
+						fontFamily: 'Fredericka the Great',
 						fontSize: 50,
 						color: '#ffffff'
 					})
@@ -62,7 +65,7 @@ export default class Intro extends Phaser.Scene {
 	}
 	update(delta) {
 		if (this.keys.SPACE.isDown) {
-			this.scene.start('Level1');
+			this.scene.start('Multiplayer');
 		}
 	}
 }
