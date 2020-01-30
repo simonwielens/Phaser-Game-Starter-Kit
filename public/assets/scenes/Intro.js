@@ -33,7 +33,7 @@ export default class Intro extends Phaser.Scene {
 			text: 'Press Space Bar to Play Ida Vs Ida (WASD + Arrows)',
 			style: {
 				fontSize: '30px',
-				fontFamily: 'Monofett',
+				fontFamily: 'Fredericka the Great',
 				color: '#ffffff',
 				align: 'center',
 				shadow: {
@@ -53,9 +53,9 @@ export default class Intro extends Phaser.Scene {
 			},
 			active: function() {
 				add
-					.text(75, 100, `The Pursuit of happiness`, {
-						fontFamily: 'Fredericka the Great',
-						fontSize: 50,
+					.text(25, 100, `The Pursuit of happiness`, {
+						fontFamily: 'Monofett',
+						fontSize: 60,
 						color: '#ffffff'
 					})
 					.setShadow(2, 2, '#333333', 2, false, true);

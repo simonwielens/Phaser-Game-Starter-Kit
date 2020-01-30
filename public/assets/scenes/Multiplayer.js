@@ -13,7 +13,7 @@ var scoreText2;
 var gameOver = false;
 
 
-var speed = 1.0;
+var speed = 20;
 
 
 
@@ -38,6 +38,7 @@ export default class Multiplayer extends Phaser.Scene {
 		this.load.audio('standup', ['assets/sounds/standup.mp3']);
 		this.load.audio('twat', ['assets/sounds/twat.mp3']);
 		this.load.audio('whore', ['assets/sounds/whore.mp3']);
+		this.load.audio('music', ['assets/sounds/Norway.mp3']);
 		this.load.image('sky', 'assets/sky.png');
 		this.load.image('ground', 'assets/platform.png');
 		this.load.image('star', 'assets/wine.png');
@@ -50,12 +51,15 @@ export default class Multiplayer extends Phaser.Scene {
 
 		//  A simple background for our game
 		this.add.image(400, 300, 'sky');
-
-		// this.add.audio('queen');
-		// this.add.audio('rude');
-		// this.add.audio('standup');
-		// this.add.audio('twat');
-		// this.add.audio('whore');
+		this.sound.play('music', {
+			mute: false,
+			volume: 0.3,
+			rate: 1,
+			detune: 0,
+			seek: 0,
+			loop: true,
+			delay: 0
+		});
 
 		//  The platforms group contains the ground and the 2 ledges we can jump on
 		platforms = this.physics.add.staticGroup();
@@ -256,7 +260,7 @@ export function collectStar (player, star)
 			bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
 			bomb.allowGravity = false;
 
-			this.speed = this.speed * 1.1;
+			this.speed = this.speed * 2;
 
 		}
 	}
