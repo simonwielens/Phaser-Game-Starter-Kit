@@ -25,7 +25,6 @@ export default class Intro extends Phaser.Scene {
 		});
 	}
 	create() {
-
 		this.add.image(400, 300, 'sky');
 		this.make.text({
 			x: 100,

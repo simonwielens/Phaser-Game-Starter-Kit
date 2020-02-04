@@ -14,12 +14,12 @@ var config = {
 	resolution: window.devicePixelRatio,
 	pixelArt: true,
 	physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 300 },
-            debug: false
-        }
-    },
+		default: 'arcade',
+		arcade: {
+			gravity: { y: 300 },
+			debug: false
+		}
+	},
 	scene: [Intro, Level1, Multiplayer]
 };
 

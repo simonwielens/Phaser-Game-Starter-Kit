@@ -16,7 +16,7 @@ compress.unused = true;
 module.exports = env => {
 	return {
 		entry: {
-			game: './assets/js/Game/index.js'
+			game: './public/assets/index.js'
 		},
 		output: {
 			path: path.resolve(__dirname, 'public/dist'),
